@@ -47,7 +47,7 @@ with open('hashtags.txt') as f:
             print(handle)
             if handle not in list_names:
                 m = handle + " " + "hola! Soy un bot verificando info del sismo. Me puedes confirmar si estos recursos aun se requieren? Grax! #19SRecursos"
-                s = api.update_status(m)
+                s = api.send_direct_message( handle, text=m )
                 nap = randint(1, 60)
                 time.sleep(nap)
                 list_names.append(handle)
